@@ -21,7 +21,8 @@ RSpec.describe Card, type: :model do
 
   describe "error messages" do
     it "fails validation with a non-unique name expecting a specific message" do
-      non_unique_card = Card.new({name: "Dark Magician"})
+      FactoryGirl.create(:card, name: "Dark Magician") # or rake db:test:prepare
+      non_unique_card = FactoryGirl.build(:card, {:name => "Dark Magician"})
       non_unique_card.valid?
       expect(non_unique_card.errors[:name]).to include("has already been taken")
     end

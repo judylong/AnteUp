@@ -7,7 +7,8 @@ RSpec.describe Version, type: :model do
   describe "validations" do
     subject { FactoryGirl.build(:version) }
 
-    it { should validate_uniqueness_of(:print_tag) }
+    it { should validate_uniqueness_of(:print_tag).scoped_to(:rarity, :set_name) }
+    it { should validate_uniqueness_of(:card_id).scoped_to(:set_name, :print_tag, :rarity) }
 
     it { should validate_presence_of(:card_id) }
     it { should validate_presence_of(:set_name) }
