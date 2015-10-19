@@ -1,7 +1,7 @@
 class VersionsController < ApplicationController
   def create
-    card = Card.where({id: version_params['card_id']})
-    @version = card.version.new(version_params)
+    card = Card.find(version_params['card_id'])
+    @version = card.versions.new(version_params)
     if @version.save
       render json: "success"
     else
