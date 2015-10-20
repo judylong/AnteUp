@@ -45,13 +45,14 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'guard-rspec'
-end
 
-group :test do
   gem 'faker'
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'launchy'
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'jasmine'
 end
 
 group :development do
