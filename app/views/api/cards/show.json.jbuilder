@@ -1,0 +1,10 @@
+json.extract! @card, :id,
+                    :name,
+                    :card_text,
+                    :card_type,
+                    :monster_type,
+                    :family,
+                    :attack,
+                    :defense,
+                    :level,
+                    :property
