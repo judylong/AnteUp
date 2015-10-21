@@ -1,10 +1,1 @@
-json.extract! @card, :id,
-                    :name,
-                    :card_text,
-                    :card_type,
-                    :monster_type,
-                    :family,
-                    :attack,
-                    :defense,
-                    :level,
-                    :property
+json.partial! 'api/cards/card' card: @card
