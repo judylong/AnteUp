@@ -13,6 +13,10 @@ module Api
       @card = Card.find(params[:id])
     end
 
+    def index
+      @cards = Card.all
+    end
+
     private
     def card_params
       params.require(:card).permit(:name,
