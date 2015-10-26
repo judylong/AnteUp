@@ -1,10 +1,11 @@
 ApiUtil = {
   fetchAllCards: function() {
+    debugger
     $.ajax({
       url: "api/cards",
       success: function(cards) {
         console.log("got 'em all'");
-        ApiActions.recieveAllCards(cards);
+        ApiActions.receiveAllCards(cards);
       }
     })
   },
@@ -14,7 +15,7 @@ ApiUtil = {
       url: 'api/cards/'+ id,
       success: function(card){
         console.log("got it");
-        ApiActions.recieveCard(card);
+        ApiActions.receiveCard(card);
       }
     });
   },

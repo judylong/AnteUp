@@ -9,6 +9,7 @@ var CardsIndex = React.createClass({
 
   componentDidMount: function()  {
     CardStore.addCardsIndexChangeListener(this._onChange);
+    ApiUtil.fetchAllCards();
   },
 
   componentWillUnmount: function() {
