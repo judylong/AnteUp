@@ -1,6 +1,5 @@
 ApiUtil = {
   fetchAllCards: function() {
-    debugger
     $.ajax({
       url: "api/cards",
       success: function(cards) {

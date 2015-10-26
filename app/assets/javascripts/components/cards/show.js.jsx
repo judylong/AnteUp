@@ -2,7 +2,6 @@ var CardShow = React.createClass({
   getInitialState: function() {
     var cardId = this.props.params.cardId;
     var card = this._findCardById(cardId);
-    debugger
     return { card: card };
   },
 
@@ -11,7 +10,6 @@ var CardShow = React.createClass({
   },
 
   _onChange: function() {
-    debugger
     this.setState({ card: this._findCardById(parseInt(this.props.params.cardId)) })
   },
 
@@ -25,7 +23,6 @@ var CardShow = React.createClass({
   },
 
   render: function() {
-    debugger
     if (this.state.card !== undefined) {
       return(
         <div>

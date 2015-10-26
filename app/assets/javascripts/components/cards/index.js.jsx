@@ -17,7 +17,6 @@ var CardsIndex = React.createClass({
   },
 
   render: function() {
-    debugger
     return(
       <ul>
         {this.state.cards.map(function(card){
